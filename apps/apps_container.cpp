@@ -24,6 +24,7 @@ AppsContainer::AppsContainer() :
   m_homeSnapshot(),
   m_onBoardingSnapshot(),
   m_hardwareTestSnapshot()
+  m_rpnSnapshot(),
 {
   m_emptyBatteryWindow.setFrame(KDRect(0, 0, Ion::Display::Width, Ion::Display::Height));
   Poincare::Expression::setCircuitBreaker(AppsContainer::poincareCircuitBreaker);
@@ -34,6 +35,7 @@ bool AppsContainer::poincareCircuitBreaker() {
   return state.keyDown(Ion::Keyboard::Key::A6);
 }
 
+    &m_rpnSnapshot,
 App::Snapshot * AppsContainer::hardwareTestAppSnapshot() {
   return &m_hardwareTestSnapshot;
 }

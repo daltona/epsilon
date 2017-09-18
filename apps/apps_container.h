@@ -2,6 +2,7 @@
 #define APPS_CONTAINER_H
 
 #include "home/app.h"
+#include "rpn/app.h"
 #include "on_boarding/app.h"
 #include "hardware_test/app.h"
 #include "on_boarding/update_controller.h"
@@ -73,6 +74,7 @@ private:
   Home::App::Snapshot m_homeSnapshot;
   OnBoarding::App::Snapshot m_onBoardingSnapshot;
   HardwareTest::App::Snapshot m_hardwareTestSnapshot;
+  Rpn::App::Snapshot m_rpnSnapshot;
 };
 
 #endif
